@@ -1,6 +1,7 @@
 export { default as App } from "./App";
 export * from "./components/atom/Icon";
 export { default as ButtonSave } from "./components/molecules/ButtonSave";
+export * from "./components/molecules/Carousel";
 export { default as HomeTemplate } from "./components/templates/HomeTemplate";
 export { default as LoginTemplate } from "./components/templates/LoginTemplate";
 export * from "./context/AuthContext";
@@ -13,3 +14,6 @@ export * from "./store/AuthStore";
 export * from "./styles/Themes";
 export * from "./styles/Variables";
 export * from "./supabase/supabase.config";
+export { default as SideBar } from "./components/organism/sidebar/SideBar";
+export * from "./styles/breakpoints";
+export { default as MenuHambur } from "./components/organism/MenuHambur";

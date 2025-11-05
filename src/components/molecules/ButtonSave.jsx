@@ -1,12 +1,14 @@
 import styled from "styled-components";
 import { Icon } from "../../index";
 
-function ButtonSave({ fun, title, color, icon }) {
+function ButtonSave({ fun, title, color, icon, url }) {
   return (
     <Container type="submit" color={color}>
       <Icon> {icon}</Icon>
       <span className="btn-title" onClick={fun}>
-        {title}
+        <a href={url} target="_blank">
+          {title}
+        </a>
       </span>
     </Container>
   );
