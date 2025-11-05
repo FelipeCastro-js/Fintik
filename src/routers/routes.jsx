@@ -1,8 +1,8 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
-import { Login } from "../index";
+import { Login, Home } from "../index";
 
-export function Routes() {
+export function MyRouter() {
   return (
     <BrowserRouter>
       <Routes>
