@@ -1,16 +1,41 @@
-# React + Vite
+# 💸 Fintik — Tu asistente moderno para el control de gastos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Fintik** es una aplicación web minimalista, rápida y escalable para visualizar, organizar y entender tus finanzas personales. Construida con tecnologías modernas y una experiencia de usuario fluida, Fintik convierte el seguimiento de gastos en algo visual, intuitivo y poderoso.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## React Compiler
+| Frontend          | Backend              | Estado & Datos         | Visualización       |
+| ----------------- | -------------------- | ---------------------- | ------------------- |
+| React + Vite      | Supabase (Auth + DB) | Zustand (global state) | React Charts.js     |
+| Styled Components | PostgreSQL           | Supabase Realtime      | Animaciones fluidas |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Características principales
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📊 **Gráficas interactivas** con [React Charts.js](https://react-chartjs-2.js.org/) para visualizar tus gastos por categoría, tiempo y hábitos.
+- 🔐 **Autenticación segura** con Supabase y gestión de sesiones.
+- 🧠 **Estado global limpio** con Zustand para una experiencia sin fricción.
+- 🎨 **Estilo moderno y adaptable** con Styled Components.
+- ⚡️ **Backend serverless** con Supabase + PostgreSQL.
+- 📁 **Organización por categorías**, etiquetas y fechas.
+- 🔄 **Actualización en tiempo real** de tus movimientos financieros.
+
+---
+
+## 🖼️ Capturas (próximamente)
+
+> Interfaz minimalista, modo oscuro, animaciones suaves y visualización clara de tus finanzas.
+
+---
+
+## 🛠️ Instalación rápida
+
+```bash
+git clone https://github.com/tuusuario/fintik.git
+cd fintik
+npm install
+npm run dev
+```

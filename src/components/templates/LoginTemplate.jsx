@@ -1,8 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { ButtonSave, v } from "../../index";
+import { ButtonSave, v, useAuthStore } from "../../index";
+
+// PWpv4D68TF7sBj0K
 
 function LoginTemplate() {
+  const { signWithGoogle } = useAuthStore();
   return (
     <Container>
       <div className="contentCard">
@@ -19,6 +22,7 @@ function LoginTemplate() {
             title="Iniciar con Google"
             color={v.colorSecundario}
             icon={<v.iconogoogle />}
+            fun={signWithGoogle}
           />
         </Button>
       </div>
