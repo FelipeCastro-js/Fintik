@@ -1,16 +1,60 @@
 import styled from "styled-components";
-import { v } from "../../../index";
+import {
+  v,
+  LinksArray,
+  SideBarCard,
+  SecondarylinksArray,
+} from "../../../index";
+import { NavLink } from "react-router-dom";
 
 function SideBar({ state, setState }) {
   return (
-    <Main>
-      <Container>
+    <Main $isopen={state.toString()}>
+      <span className="SideBarButton" onClick={() => setState(!state)}>
+        {<v.iconoflechaderecha />}
+      </span>
+      <Container $isopen={state.toString()} className={state ? "active" : ""}>
         <div className="LogoContent">
           <div className="imgContent">
             <img src={v.logo} alt="Logo Fintik" />
           </div>
+          <h2>Fintik</h2>
         </div>
-        <h2>Fintik</h2>
+        {LinksArray.map(({ icon, label, to }) => (
+          <div
+            className={state ? "LinkContainer active" : "LinkContainer"}
+            key={label}
+          >
+            <NavLink
+              to={to}
+              className={({ isActive }) => `Links${isActive ? ` active` : ``}`}
+            >
+              <div className="LinkIcon">{icon}</div>
+              <span className={state ? "Label_Visible" : "LabelHidden"}>
+                {label}
+              </span>
+            </NavLink>
+          </div>
+        ))}
+        <Divider />
+        {SecondarylinksArray.map(({ icon, label, to }) => (
+          <div
+            className={state ? "LinkContainer active" : "LinkContainer"}
+            key={label}
+          >
+            <NavLink
+              to={to}
+              className={({ isActive }) => `Links${isActive ? ` active` : ``}`}
+            >
+              <div className="LinkIcon">{icon}</div>
+              <span className={state ? "Label_Visible" : "LabelHidden"}>
+                {label}
+              </span>
+            </NavLink>
+          </div>
+        ))}
+        <Divider />
+        {state && <SideBarCard />}
       </Container>
     </Main>
   );
@@ -69,7 +113,7 @@ const Container = styled.div`
         transform: translate(0, 0px);
       }
       50% {
-        transform: translate(0, 4px);
+        transform: translate(0, 10px);
       }
       100% {
         transform: translate(0, -0px);

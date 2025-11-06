@@ -15,5 +15,7 @@ export * from "./styles/Themes";
 export * from "./styles/Variables";
 export * from "./supabase/supabase.config";
 export { default as SideBar } from "./components/organism/sidebar/SideBar";
+export * from "./components/organism/sidebar/SideBarCard";
 export * from "./styles/breakpoints";
 export { default as MenuHambur } from "./components/organism/MenuHambur";
+export * from "./utils/StaticData";
