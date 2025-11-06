@@ -3,51 +3,54 @@ import { Carousel, ButtonSave, v } from "../../index";
 
 function HomeTemplate() {
   return (
-    <Main>
-      <Container>
-        <Box>
-          <Carousel />
-        </Box>
-        <Title>
-          Bievenido a Fintik <br /> 🚀
-        </Title>
+    // <Main>
+    //   <Container>
+    //     <Box>
+    //       <Carousel />
+    //     </Box>
+    //     <Title>
+    //       Bievenido a Fintik <br /> 🚀
+    //     </Title>
 
-        <SubText>
-          Fintik nace de la necesidad de ofrecer una alternativa gratuita,
-          moderna y confiable para gestionar tus gastos e ingresos. En un mundo
-          donde la mayoría de las aplicaciones financieras limitan sus funciones
-          o esconden costos, Fintik apuesta por la transparencia y la
-          simplicidad.
-          <br />
-          Con una interfaz intuitiva y herramientas pensadas para ti, queremos
-          que tengas el control total de tu dinero y la tranquilidad de tomar
-          decisiones financieras inteligentes.
-        </SubText>
-        <ContainerAuthor>
-          <div className="contentImg">
-            <img src="" alt="Img Felipe" />
-          </div>
-          <div className="contentDescription">
-            <b>Ing. Felipe Castro</b>
-            <span>Si lo puedes imaginar, lo puedes programar</span>
-          </div>
-        </ContainerAuthor>
-        <ButtonContainer>
-          <ButtonSave
-            url="https://www.linkedin.com/in/felipe-castro-907478182/"
-            title="🚀 Conectemos en LinkedIn"
-            color="#BF94FF"
-            icon={<v.iconocorona />}
-          />
-          <ButtonSave
-            url="https://felipe-castro.vercel.app/"
-            title="✨ Explora mi portafolio"
-            color="#fb37b7"
-            icon={<v.iconocorona />}
-          />
-        </ButtonContainer>
-      </Container>
-    </Main>
+    //     <SubText>
+    //       Fintik nace de la necesidad de ofrecer una alternativa gratuita,
+    //       moderna y confiable para gestionar tus gastos e ingresos. En un mundo
+    //       donde la mayoría de las aplicaciones financieras limitan sus funciones
+    //       o esconden costos, Fintik apuesta por la transparencia y la
+    //       simplicidad.
+    //       <br />
+    //       Con una interfaz intuitiva y herramientas pensadas para ti, queremos
+    //       que tengas el control total de tu dinero y la tranquilidad de tomar
+    //       decisiones financieras inteligentes.
+    //     </SubText>
+    //     <ContainerAuthor>
+    //       <div className="contentImg">
+    //         <img src={null} alt="Img Felipe" />
+    //       </div>
+    //       <div className="contentDescription">
+    //         <b>Ing. Felipe Castro</b>
+    //         <span>Si lo puedes imaginar, lo puedes programar</span>
+    //       </div>
+    //     </ContainerAuthor>
+    //     <ButtonContainer>
+    //       <ButtonSave
+    //         url="https://www.linkedin.com/in/felipe-castro-907478182/"
+    //         title="🚀 Conectemos en LinkedIn"
+    //         color="#BF94FF"
+    //         icon={<v.iconocorona />}
+    //       />
+    //       <ButtonSave
+    //         url="https://felipe-castro.vercel.app/"
+    //         title="✨ Explora mi portafolio"
+    //         color="#fb37b7"
+    //         icon={<v.iconocorona />}
+    //       />
+    //     </ButtonContainer>
+    //   </Container>
+    // </Main>
+    <div>
+      <h1>HomeTemplate</h1>
+    </div>
   );
 }
 
@@ -56,7 +59,7 @@ export default HomeTemplate;
 const Main = styled.main`
   min-height: 100vh;
   width: 100%;
-  background-color: ${(props) => props.theme.bgtotal};
+  background-color: ${(theme) => theme.bgtotal};
   display: flex;
   justify-content: center;
   align-items: center;

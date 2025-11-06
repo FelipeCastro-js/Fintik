@@ -63,8 +63,8 @@ function SideBar({ state, setState }) {
 export default SideBar;
 
 const Container = styled.div`
-  color: ${(theme) => theme.text};
-  background: ${(theme) => theme.bg};
+  color: ${(props) => props.theme.text};
+  background: ${(props) => props.theme.bg};
   position: fixed;
   padding-top: 20px;
   z-index: 1;
@@ -78,7 +78,7 @@ const Container = styled.div`
     border-radius: 10px;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: ${(theme) => theme.colorScroll};
+    background-color: ${(props) => props.theme.colorScroll};
     border-radius: 10px;
   }
 
@@ -113,7 +113,7 @@ const Container = styled.div`
         transform: translate(0, 0px);
       }
       50% {
-        transform: translate(0, 10px);
+        transform: translate(0, 4px);
       }
       100% {
         transform: translate(0, -0px);
@@ -168,7 +168,6 @@ const Container = styled.div`
     }
   }
 `;
-
 const Main = styled.div`
   .SideBarButton {
     position: fixed;
@@ -191,7 +190,6 @@ const Main = styled.div`
     color: ${(props) => props.theme.text};
   }
 `;
-
 const Divider = styled.div`
   height: 1px;
   width: 100%;
