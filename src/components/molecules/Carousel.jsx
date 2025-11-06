@@ -22,6 +22,7 @@ import img2 from "../../assets/roulette/carrosel4.png";
 import img3 from "../../assets/roulette/carrosel3.png";
 import img4 from "../../assets/roulette/carrosel2.png";
 import img5 from "../../assets/roulette/carrosel1.png";
+import Arrow from "../../assets/Arrow.svg";
 
 export function Carousel() {
   return (

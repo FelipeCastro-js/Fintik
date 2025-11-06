@@ -19,3 +19,4 @@ export * from "./components/organism/sidebar/SideBarCard";
 export * from "./styles/breakpoints";
 export { default as MenuHambur } from "./components/organism/MenuHambur";
 export * from "./utils/StaticData";
+export * from "./components/molecules/Carousel";
