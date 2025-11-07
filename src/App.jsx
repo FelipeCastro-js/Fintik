@@ -8,30 +8,38 @@ import {
   MyRouter,
   MenuHambur,
 } from "./index";
+import { useLocation } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 
 export const ThemeContext = createContext(null);
 
 function App() {
+  const { pathname } = useLocation();
   const [theme, setTheme] = useState("light");
   const themeStyle = theme === "light" ? Light : Dark;
   const [sideBarOpen, setSideBarOpen] = useState(false);
+
   return (
     <>
       <ThemeContext.Provider value={{ setTheme, theme }}>
         <ThemeProvider theme={themeStyle}>
           <AuthContextProvider>
-            <Container className={sideBarOpen ? "active" : ""}>
-              <div className="ContentSideBar">
-                <SideBar state={sideBarOpen} setState={setSideBarOpen} />
-              </div>
-              <div className="ContentMenuBar">
-                <MenuHambur />
-              </div>
-              <Containerbody>
-                <MyRouter />
-              </Containerbody>
-            </Container>
+            {pathname != "/login" ? (
+              <Container className={sideBarOpen ? "active" : ""}>
+                <div className="ContentSideBar">
+                  <SideBar state={sideBarOpen} setState={setSideBarOpen} />
+                </div>
+                <div className="ContentMenuBar">
+                  <MenuHambur />
+                </div>
+
+                <Containerbody>
+                  <MyRouter />
+                </Containerbody>
+              </Container>
+            ) : (
+              <MyRouter />
+            )}
           </AuthContextProvider>
         </ThemeProvider>
       </ThemeContext.Provider>

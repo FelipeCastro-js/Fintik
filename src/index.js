@@ -20,3 +20,5 @@ export * from "./styles/breakpoints";
 export * from "./components/organism/MenuHambur";
 export * from "./utils/StaticData";
 export * from "./components/molecules/Carousel";
+export * from "./supabase/crudUsers";
+export * from "./supabase/globalSupabase";
